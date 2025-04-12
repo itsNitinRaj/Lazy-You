@@ -57,7 +57,23 @@ The script will start monitoring your email inbox and schedule phone call alerts
 
 ## Configuration
 
-- **Email Credentials**: Set your email user and password in the `.env` file.
+- **Email Credentials**: Set your email user and password in the `.env` file. You need your *email address* and an *app password* (if required) to log in via IMAP.
+    
+    🔹 Gmail Users -
+    
+    1. Go to [Google App Passwords](https://myaccount.google.com/apppasswords).
+    2. Select *"Mail"* as the app and *"Other"* as the device.
+    3. Generate a password and store it safely.
+    4. Use this app password as `EMAIL_PASS`.
+    
+    🔹 Outlook / Hotmail Users -
+       
+    1. Go to [Microsoft Security Settings](https://account.live.com/proofs/Manage).
+    2. Generate an app password.
+    3. Use it instead of your normal password.
+    
+    🔹 Other Email Providers - Check if they require *App Passwords* or *OAuth authentication*.
+
 - **Twilio Credentials**: Set your Twilio account SID, auth token, and phone numbers in the `.env` file.
 - **Polling Interval**: Adjust the polling interval in the `.env` file to control how frequently the script checks for new emails.
 
